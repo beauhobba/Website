@@ -85,7 +85,7 @@ const Robotatouille = () => {
                         Description
                     </h4>
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
-                    This role involved working with a team of 2 other individuals to program a 'robotic bar' for the promotion of the new Heineken 0.0, zero alcohol beer. This full-on role involved robotic arm movement using the UR-5 robotic arms, various sensors, person detection using machine learning, an automated conveyor system, ROS interfacing and a surplus of analog I/O electrical wiring. We worked directly with a marketing team, creating various on-the-spot changes to the robot, to finalise a pair of robots for a week-long activation period.
+                    This project involved working with 2 other individuals to create a cooking robot, conned '<i>Robotatouille</i>'. This full-on role involved robotic arm movement using the UR-5 robotic arms, a weight sensor, a RGBD camera and various props. The software was built using ROS, and an accurate machine learning model was created to predict and locate recipe ingredients.  The training data was hand made with many hours of tedious labelling.  The system was able to read a recipe, locate the ingredients, perform cooking steps (stirring, measuring, mixing) and perform advanced path planning. 
                     <br>
                     </br>
                     <br>
@@ -95,11 +95,11 @@ const Robotatouille = () => {
                     </h4>
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
                     <ul>
-                        <li>Kinematics/Coordinate Transforms</li>
+                        <li>Machine Learning</li>
                         <li>UAV Control</li>
-                        <li>Semantic Segmentation</li>
-                        <li>OpenCV</li>
-                        <li>Geotagging</li>
+                        <li>Sensors</li>
+                        <li>ROS</li>
+                        <li>System Design</li>
                     </ul>
 
                     <h4 class="font-weight-light">

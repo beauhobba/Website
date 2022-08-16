@@ -78,7 +78,7 @@ const HerbicideMapping = () => {
                         Description
                     </h4>
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
-                    This role involved working with a team of 2 other individuals to program a 'robotic bar' for the promotion of the new Heineken 0.0, zero alcohol beer. This full-on role involved robotic arm movement using the UR-5 robotic arms, various sensors, person detection using machine learning, an automated conveyor system, ROS interfacing and a surplus of analog I/O electrical wiring. We worked directly with a marketing team, creating various on-the-spot changes to the robot, to finalise a pair of robots for a week-long activation period.
+                    Accurate detection of invasive weeds in sparse, rural regions is a significant challenge in site specific weed management (SSWM). These weeds can be noxious to animals, downgrade the surrounding plants' standard of life, and cause a significant monetary deficit to farmers purchasing large quantities of herbicides. This paper uses semantic segmentation to detect, classify and geolocate common weeds of Paterson’s curse, stinging nettle, Scotch thistle and capeweed in aerial imagery acquired by an Unmanned Aerial Vehicle. Finally, herbicide maps promoting SSWM are generated, providing farmers with tools to optimise the quantity of herbicide application.
                     <br>
                     </br>
                     <br>

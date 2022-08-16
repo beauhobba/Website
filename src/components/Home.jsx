@@ -3,6 +3,7 @@ import coverphoto from '../images/coverphoto.png'
 import heinkein_arm from '../images/robot_arms_heinkein.png'
 import weed_farm from '../images/weed_farm.png'
 import cooking_robot from '../images/cooking_robot.png'
+import white from '../images/white.png'
 import CardTile from "./cards/CardTile"
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -28,7 +29,9 @@ function Home() {
           <div class="col-lg-5">
             <h1 class="font-weight-light">Hi, I'm Beau</h1>
             <p>
-              and I like robots. Here are some projects I have worked on...
+              and I like robots. Here are some projects I have worked on... <br></br>
+              <i>🚧 Note this website is still under construction 🚧</i>
+              
             </p>
             
           </div>
@@ -55,15 +58,36 @@ function Home() {
           <div class="row">
 
           <div class="col-sm">
-            <CardTile photo={heinkein_arm} text={"Inspector"} />
+            <CardTile photo={white} text={"Inspector"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={weed_farm} text={"Brick"} />
+            <CardTile photo={white} text={"Brick"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={cooking_robot} text={"PyChat"} />
+            <CardTile photo={white} text={"PyChat"} />
+          </div>
+
+        </div>       
+        </div>
+
+        <div style={{
+      display: "flex",
+      flexDirection: "column",
+      paddingTop: '20px'}}>
+          <div class="row">
+
+          <div class="col-sm">
+            <CardTile photo={white} text={"CoreNLP"} />
+          </div>
+
+          <div class="col-sm">
+          <CardTile photo={white} text={"TBD"} />
+          </div>
+
+          <div class="col-sm">
+            <CardTile photo={white} text={"TBD"} />
           </div>
 
         </div>       
