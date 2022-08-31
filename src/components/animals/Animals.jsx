@@ -1,18 +1,12 @@
 import React, {Text} from "react";
 import coverphoto from '../../images/coverphoto.png'
-import heinkein_arm from '../../images/robot_arms_heinkein.png'
-import weed_farm from '../../images/weed_farm.png'
-import cooking_robot from '../../images/cooking_robot.png'
 import white from '../../images/white.png'
 import CardTile from "../cards/CardTile"
 import "react-image-gallery/styles/css/image-gallery.css";
-
-import Heineken from '../modals/Heineken'
-import HerbicideMapping from '../modals/HerbicideMapping'
-import Robotatouille from '../modals/Robotatouille'
+import AnimalPost from "./AnimalPost"
 
 
-function Blog() {
+function Animals() {
   return (
     <div >
       <div class="container" style={{
@@ -26,9 +20,10 @@ function Blog() {
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">My Blog</h1>
+            <h1 class="font-weight-light">Animal Documentation</h1>
             <p>
-              Documenting my life... <br></br>
+              In 2022 I wanted to document every Aussie animal <br></br>
+              Here is my progress...
               
             </p>
             
@@ -37,20 +32,19 @@ function Blog() {
 
         <div style={{
       display: "flex",
-      flexDirection: "column",
-      paddingTop: '20px'}}>
+      flexDirection: "column"}}>
           <div class="row">
 
           <div class="col-sm">
-          <CardTile photo={white} text={"TBD"} />
+          <AnimalPost animal_photo={white} animal_name={"Koala"} description={"YOOYOYOYOYO"} latitude={-35.19147} longitude ={-148.1357} location_name={"Tumut"} date ={"31/08/2022"}/>
           </div>
 
           <div class="col-sm">
-          <CardTile photo={white} text={"TBD"} />
+          <AnimalPost animal_photo={white} animal_name={"Kangaroo"} description={"YOOYOYOYOYO"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={white} text={"TBD"} />
+            <AnimalPost animal_photo={white} animal_name={"Carrot"} description={"YOOYOYOYOYO"} />
           </div>
 
         </div>       
@@ -62,4 +56,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default Animals;
