@@ -83,11 +83,11 @@ function Home() {
           </div>
 
           <div class="col-sm">
-          <CardTile photo={white} text={"TBD"} />
+          <CardTile photo={white} text={"Roost"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={white} text={"TBD"} />
+            <CardTile photo={white} text={"Latitude Longitude Postcode"} />
           </div>
 
         </div>       

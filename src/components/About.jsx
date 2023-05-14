@@ -18,7 +18,7 @@ function About() {
           <div class="col-lg-5">
             <h1 class="font-weight-light">About</h1>
             <p>
-            Hi, I am Beau Hobba, and I am a mechatronics engineer. I moved to Sydney from rural Young, NSW, in 2016. I reside in Sydney, Australia and have recently finished with First Class Honours in Mechatronic Engineering.
+            Hi, I am Beau Hobba, and I am a mechatronics engineer. I moved to Sydney from rural Young, NSW, in 2016. I reside in Sydney, Australia and have recently finished with First Class Honours in Mechatronic Engineering. Since then I have moved back to the country. 
               <br></br>
               <br></br>
               I am talented at leading teams and creating complex systems to match the project. My passions lie in automation, everyday assistive robotics, AI, earth/space exploration, agriculture, and ethical robotics. I firmly believe robotics is a central part of our future and am fascinated by their ability to assist our everyday lives. I wish to use my programming expertise to help develop technology yet to be discovered.
