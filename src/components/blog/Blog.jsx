@@ -29,7 +29,7 @@ function Blog() {
             <h1 class="font-weight-light">My Blog</h1>
             <p>
               Documenting my life... <br></br>
-              
+              🚧 Note this website is still under construction 🚧
             </p>
             
           </div>

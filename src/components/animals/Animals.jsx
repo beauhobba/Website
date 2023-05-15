@@ -23,7 +23,7 @@ function Animals() {
             <h1 class="font-weight-light">Animal Documentation</h1>
             <p>
               In 2022 I wanted to document every Aussie animal <br></br>
-              Here is my progress...
+              🚧 Note this part of the website is still very much under construction 🚧
               
             </p>
             
@@ -36,15 +36,15 @@ function Animals() {
           <div class="row">
 
           <div class="col-sm">
-          <AnimalPost animal_photo={white} animal_name={"Koala"} description={"YOOYOYOYOYO"} latitude={-35.19147} longitude ={-148.1357} location_name={"Tumut"} date ={"31/08/2022"}/>
+          <AnimalPost animal_photo={white} animal_name={"Koala"} description={"Lipsum"} latitude={-35.19147} longitude ={-148.1357} location_name={"Tumut"} date ={"31/08/2022"}/>
           </div>
 
           <div class="col-sm">
-          <AnimalPost animal_photo={white} animal_name={"Kangaroo"} description={"YOOYOYOYOYO"} />
+          <AnimalPost animal_photo={white} animal_name={"Kangaroo"} description={"Lipsum"} />
           </div>
 
           <div class="col-sm">
-            <AnimalPost animal_photo={white} animal_name={"Carrot"} description={"YOOYOYOYOYO"} />
+            <AnimalPost animal_photo={white} animal_name={"Emu"} description={"Lipsum"} />
           </div>
 
         </div>       
