@@ -1,8 +1,9 @@
 import React, {Text} from "react";
 import coverphoto from '../images/coverphoto.png'
-import heinkein_arm from '../images/robot_arms_heinkein.png'
-import weed_farm from '../images/weed_farm.png'
-import cooking_robot from '../images/cooking_robot.png'
+import brick from '../images/brick.png'
+import deepracer from '../images/deepracer.png'
+import pychat from '../images/pychat.png'
+import inspector from '../images/inspector.png'
 import white from '../images/white.png'
 import CardTile from "./cards/CardTile"
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -11,7 +12,6 @@ import Heineken from './modals/Heineken'
 import HerbicideMapping from './modals/HerbicideMapping'
 import Robotatouille from './modals/Robotatouille'
 import Roost from './modals/Roost'
-
 
 function Home() {
   return (
@@ -58,15 +58,15 @@ function Home() {
           <div class="row">
 
           <div class="col-sm">
-            <CardTile photo={white} text={"Inspector"} />
+            <CardTile photo={inspector} text={"Inspector"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={white} text={"Brick"} />
+            <CardTile photo={brick} text={"Brick"} />
           </div>
 
           <div class="col-sm">
-            <CardTile photo={white} text={"PyChat"} />
+            <CardTile photo={pychat} text={"PyChat"} />
           </div>
 
         </div>       
@@ -97,7 +97,7 @@ function Home() {
           <div class="row">
 
           <div class="col-sm">
-            <CardTile photo={white} text={"Deepracer 2022"} />
+            <CardTile photo={deepracer} text={"Deepracer 2022"} />
           </div>
 
           <div class="col-sm">

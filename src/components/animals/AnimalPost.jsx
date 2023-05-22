@@ -1,10 +1,7 @@
 import React, {useState} from "react";
-import cooking_robot from '../../images/cooking_robot.png'
 import CardTile from "../cards/CardTile"
 import { Modal } from "react-bootstrap";
-import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
-import heinkein_arm from '../../images/robot_arms_heinkein.png'
 import MapChart from "./Map";
 
 const AnimalPost = (props) => {
@@ -42,7 +39,7 @@ const AnimalPost = (props) => {
                 <h4 class="font-weight-light">
                         Details
                     </h4>
-                    Scientific Name: <i>Koal betus</i>
+                    Scientific Name: <i>Phascolarctos cinereus</i>
                     <br></br>
                     Located: <i>{props.latitude}</i>, <i>{props.longitude}</i>
                     <br></br>

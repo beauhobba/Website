@@ -1,7 +1,9 @@
 import React, {Text} from "react";
 import coverphoto from '../../images/coverphoto.png'
 import white from '../../images/white.png'
-import CardTile from "../cards/CardTile"
+import Koala from '../../images/Animals/koala.png'
+import SwampWallaby from '../../images/Animals/swampwallaby.png'
+import SacredKingfisher from '../../images/Animals/sacredkingfisher.png'
 import "react-image-gallery/styles/css/image-gallery.css";
 import AnimalPost from "./AnimalPost"
 
@@ -23,8 +25,8 @@ function Animals() {
             <h1 class="font-weight-light">Animal Documentation</h1>
             <p>
               In 2022 I wanted to document every Aussie animal <br></br>
-              🚧 Note this part of the website is still very much under construction 🚧
-              
+              Here are some of my favourite shoots. <br></br>
+              🚧 Note this part of the website is still very much under construction 🚧<br></br>
             </p>
             
           </div>
@@ -36,15 +38,15 @@ function Animals() {
           <div class="row">
 
           <div class="col-sm">
-          <AnimalPost animal_photo={white} animal_name={"Koala"} description={"Lipsum"} latitude={-35.19147} longitude ={-148.1357} location_name={"Tumut"} date ={"31/08/2022"}/>
+          <AnimalPost animal_photo={Koala} animal_name={"Koala"} description={"First time seeign a Koala and we saw 20! Got lost on French Island and ended up riding our bikes for more then 30km."} latitude={-38.3489} longitude ={-145.3365} location_name={"French Island (Victoria)"} date ={"Early 2022"}/>
           </div>
 
           <div class="col-sm">
-          <AnimalPost animal_photo={white} animal_name={"Kangaroo"} description={"Lipsum"} />
+          <AnimalPost animal_photo={SacredKingfisher} animal_name={"Sacred Kingfisher"} description={"First time seeing a kingfisher which isnt a kookaburra! Saw this with my brother between Megalong and Jenolan. First 4x4 experience to get to this campsite"} />
           </div>
 
           <div class="col-sm">
-            <AnimalPost animal_photo={white} animal_name={"Emu"} description={"Lipsum"} />
+            <AnimalPost animal_photo={SwampWallaby} animal_name={"Swamp Wallaby"} description={"Had the pleasure of seeing this guy only 15 minutes from my house at Cudal"} />
           </div>
 
         </div>       
