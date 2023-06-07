@@ -12,6 +12,7 @@ import Heineken from './modals/Heineken'
 import HerbicideMapping from './modals/HerbicideMapping'
 import Robotatouille from './modals/Robotatouille'
 import Roost from './modals/Roost'
+import AustraliaDatabases from './modals/AustraliaDatabases'
 
 function Home() {
   return (
@@ -83,10 +84,7 @@ function Home() {
           </div>
 
           <Roost> </Roost>
-
-          <div class="col-sm">
-            <CardTile photo={white} text={"API Tools"} />
-          </div>
+          <AustraliaDatabases/>
         </div>   
         </div>
 
