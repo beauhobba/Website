@@ -19,6 +19,10 @@ const AustraliaDatabases = () => {
       handleShow();
     };
 
+    // const closeModule = (e) => {
+    //     handleShow();
+    //   };
+
     return(
     <><div class="col-sm">
         <CardTile
@@ -28,6 +32,10 @@ const AustraliaDatabases = () => {
         />
         </div>
         <Modal show={show} onHide={handleClose} size="lg">
+            
+            <div onClick={handleClose} style={{justifyContent: 'flex-end', display: "flex", paddingRight: 10}}>
+                <p style={{fontSize: 30,  marginTop: 0}}><b>x</b></p>
+            </div>
 
             <Modal.Title style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}>
                 <div>
@@ -58,6 +66,8 @@ const AustraliaDatabases = () => {
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
                     <ul>
                         <li>React</li>
+                        <li>Mapbox</li>
+                        <li>Plotly</li>
                         <li>Python</li>
                         <li>AWS Amplify</li>
                         <li>AWS S3</li>
@@ -71,7 +81,7 @@ const AustraliaDatabases = () => {
                     <p>The following website was designed and hosted (using AWS) by myself.</p>
                     <div  style={{paddingLeft:20, paddingBottom: 20}}>
                     <a href="https://www.australiadatabases.com/" rel="noreferrer">
-    Roost Game
+    Australia Databases Website
   </a>
   </div>
 
