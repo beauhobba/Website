@@ -5,16 +5,16 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import {isMobile } from "react-device-detect";
 
 import openmap from '../../images/openmap.png'
+import ShuffleboardImg from "../../images/shuffleboardcv.png"
 
-
-const AustraliaDatabases = () => {
+const Shuffleboard = () => {
     const [show, setShow] = React.useState(false);
     const [mobile, setMobile] = React.useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
-    const class_text = "Australia Databases"
+    const class_text = "Shuffleboard"
 
     const handleSubmit = (e) => {
       handleShow();
@@ -31,7 +31,7 @@ const AustraliaDatabases = () => {
     return(
     <><div class="col-sm">
         <CardTile
-            photo={openmap}
+            photo={ShuffleboardImg}
             text={class_text}
             event={() => handleSubmit()} 
         />
@@ -59,7 +59,7 @@ const AustraliaDatabases = () => {
                         Description
                     </h4>
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
-                    Australian databases is a website I created to host crucial Australian data. Normally this data is hard to find and hidden behind pay walls. This involved me creating python scripts to read and create datasets, and then using React and AWS to host the data.
+                    Collaborated with a colleague to develop a computer vision-based shuffleboard tracker. Our program accurately monitored scores for two players during a game. I focused on building the computer vision algorithm, while my co-worker developed an interactive React application. We integrated an Intel RealSense camera to track the shuffleboard pucks and included edge case rules, enabling the program to detect the end of each round.
                     <br>
                     </br>
                     <div style={{ justifyItems: "center", display: 'flex', alignContent: 'center', alignItems: 'center', width: '50%' }}>
@@ -72,25 +72,11 @@ const AustraliaDatabases = () => {
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
                     <ul>
                         <li>React</li>
-                        <li>Mapbox</li>
-                        <li>Plotly</li>
+                        <li>Computer Vision</li>
                         <li>Python</li>
-                        <li>AWS Amplify</li>
-                        <li>AWS S3</li>
-                        <li>AWS Route 52</li>
-                        <li>AWS Cli</li>
+                        <li>Intel RealSense</li>
+                        <li>API</li>
                     </ul>
-                    <h4 class="font-weight-light">
-                        Website
-                    </h4>
-                    <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
-                    <p>The following website was designed and hosted (using AWS) by myself.</p>
-                    <div  style={{paddingLeft:20, paddingBottom: 20}}>
-                    <a href="https://www.australiadatabases.com/" rel="noreferrer">
-    Australia Databases Website
-  </a>
-  </div>
-
                 </div>
             </Modal.Body>
             <Modal.Footer>
@@ -100,4 +86,4 @@ const AustraliaDatabases = () => {
     )
 }
 
-export default AustraliaDatabases
+export default Shuffleboard

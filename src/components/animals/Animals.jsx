@@ -25,7 +25,9 @@ function Animals() {
             <h1 class="font-weight-light">Animal Documentation</h1>
             <p>
               In 2022 I wanted to document every Aussie animal <br></br>
-              Here are some of my favourite shoots. <br></br>
+              I plan to ramp this hobby up in 2024, with some big plans. <br></br><br/>
+              I post all my animal sightings to  <a href="https://www.inaturalist.org/people/beau_hobba">INaturalist (nonprofit website for mapping and sharing oversations of biodiversity)</a><br></br>
+              Here are some of my favourite shoots. <br></br><br/>
               🚧 Note this part of the website is still very much under construction 🚧<br></br>
             </p>
             
@@ -38,7 +40,7 @@ function Animals() {
           <div class="row">
 
           <div class="col-sm">
-          <AnimalPost animal_photo={Koala} animal_name={"Koala"} description={"First time seeign a Koala and we saw 20! Got lost on French Island and ended up riding our bikes for more then 30km."} latitude={-38.3489} longitude ={-145.3365} location_name={"French Island (Victoria)"} date ={"Early 2022"}/>
+          <AnimalPost animal_photo={Koala} animal_name={"Koala"} description={"First time seeing a Koala and we saw 20! Got lost on French Island and ended up riding our bikes for more then 30km."} latitude={-38.3489} longitude ={-145.3365} location_name={"French Island (Victoria)"} date ={"Early 2022"}/>
           </div>
 
           <div class="col-sm">
