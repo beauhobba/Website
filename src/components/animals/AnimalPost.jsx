@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardTile from "../cards/CardTile";
 import { Modal } from "react-bootstrap";
 import "react-image-gallery/styles/css/image-gallery.css";
-import MapChart from "./Map";
+
 
 const AnimalPost = (props) => {
   const [show, setShow] = React.useState(false);
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -14,7 +15,9 @@ const AnimalPost = (props) => {
     handleShow();
   };
 
+
   return (
+    
     <>
       <div class="col-sm">
         <CardTile
@@ -53,18 +56,15 @@ const AnimalPost = (props) => {
             {props.description}
             <br></br>
             <br></br>
-            <h4 class="font-weight-light">Geographic Location</h4>
+            {/* <h4 class="font-weight-light">Geographic Location</h4>
             <hr
               style={{ color: "black", backgroundColor: "white", height: 5 }}
             />
             <br></br>
             <br></br>
-            <MapChart
-              markers={{
-                name: props.location_name,
-                coordinates: [props.latitude, props.longitude],
-              }}
-            ></MapChart>
+            <div id="map"></div> */}
+
+            
             <hr
               style={{ color: "black", backgroundColor: "white", height: 5 }}
             />
