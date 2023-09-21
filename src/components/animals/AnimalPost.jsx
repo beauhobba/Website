@@ -40,7 +40,7 @@ const AnimalPost = (props) => {
         <Modal.Body>
           <div class="font-weight-light">
             <h4 class="font-weight-light">Details</h4>
-            Scientific Name: <i>Phascolarctos cinereus</i>
+            Scientific Name: <i>{props.scientific_name}</i>
             <br></br>
             Located: <i>{props.latitude}</i>, <i>{props.longitude}</i>
             <br></br>

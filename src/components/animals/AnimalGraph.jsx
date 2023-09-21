@@ -41,8 +41,8 @@ const AnimalGraph = (props) => {
             },
             autosize: true,
             height: 650,
-            paper_bgcolor: "#000000", // Set the background color of the entire chart to black
-            plot_bgcolor: "#000000", // Set the background color of the plot area to black
+            paper_bgcolor: "#FFFFFF", // Set the background color of the entire chart to black
+            plot_bgcolor: "#FFFFFF", // Set the background color of the plot area to black
             margin: {
               l: 0,
               r: 0,
@@ -50,7 +50,7 @@ const AnimalGraph = (props) => {
               b: 0,
             },
             legend: {
-              bgcolor: "rgba(255, 255, 255, 0.7)",
+              bgcolor: "rgba(0, 0, 0, 0.7)",
               bordercolor: "rgba(0, 0, 0, 0.2)",
               borderwidth: 1,
               x: 0,

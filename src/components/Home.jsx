@@ -1,12 +1,11 @@
 import React, { Text } from "react";
 import coverphoto from "../images/coverphoto.png";
 import brick from "../images/brick.png";
-import deepracer from "../images/deepracer.png";
+import Deepracer from "./modals/Deepracer";
 import pychat from "../images/pychat.png";
 import inspector from "../images/inspector.png";
 import white from "../images/white.png";
 import CardTile from "./cards/CardTile";
-import "react-image-gallery/styles/css/image-gallery.css";
 
 import Heineken from "./modals/Heineken";
 import Shuffleboard from "./modals/Shuffleboard"
@@ -108,9 +107,7 @@ function Home() {
           }}
         >
           <div class="row">
-            <div class="col-sm">
-              <CardTile photo={deepracer} text={"Deepracer 2022"} />
-            </div>
+            <Deepracer/>
 
 
               <Shuffleboard></Shuffleboard>
