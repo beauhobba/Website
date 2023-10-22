@@ -45,6 +45,11 @@ function Navigation() {
                   Animals
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <div className="nav-link" >
+                <a href='/resume_2023.pdf' download>Download Resume</a>
+                  </div>
+              </li>
             </ul>
           </div>
         </div>
