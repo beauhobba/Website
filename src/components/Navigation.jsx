@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Resume from "./modals/Resume";
+
 
 function Navigation() {
   return (
@@ -47,7 +49,12 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <div className="nav-link" >
-                <a href='/resume_2023.pdf' download>Download Resume</a>
+                <Resume/>
+                  </div>
+              </li>
+              <li className="nav-item">
+                <div className="nav-link" >
+                <a href='/resume_2023.pdf' download>Download</a>
                   </div>
               </li>
             </ul>
