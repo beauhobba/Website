@@ -26,7 +26,7 @@ const Resume = () => {
 
   return (
     <>
-      <div className="nav-item">
+      <div className="nav-item" >
         <p onClick={() => handleSubmit()}>{"Resume"}</p>
       </div>
         <Modal show={show} onHide={handleClose} size={mobile ? null : "lg"}>

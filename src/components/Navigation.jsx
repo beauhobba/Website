@@ -68,51 +68,61 @@ function Navigation() {
       </nav>
       </BrowserView>
       <MobileView>
-      <nav className="navbar navbar-expand navbar-light"  style={{
-      backgroundColor: '#EDEDED',
-    }}>
-      
-      <div className="container">
-          <NavLink className="navbar-brand" to="/">
-            Beau Hobba
+  <nav
+    className="navbar navbar-expand navbar-light"
+    style={{
+      backgroundColor: "#EDEDED",
+    }}
+  >
+    <div className="container" style={{ display: "flex", justifyContent: "center" }}>
+      <ul
+        className="navbar-nav"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          width: "100%", // Makes sure the items can spread out across the whole container
+          padding: 0,
+          margin: 0,
+          listStyle: "none",
+        }}
+      >
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/">
+            <FaHome style={{ width: 30 }} />
+            <span className="sr-only">(current)</span>
           </NavLink>
-          <div>
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/">
-                <FaHome style={{width: 30}}/>
-                  <span className="sr-only">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
-                <FaAddressCard style={{width: 30}}/>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/skills">
-                <FaLaptopCode style={{width: 30}}/>
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                <FaPhoneAlt style={{width: 30}}/>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link" >
-                <Resume/>
-                  </div>
-              </li>
-            </ul>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/about">
+            <FaAddressCard style={{ width: 30 }} />
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/skills">
+            <FaLaptopCode style={{ width: 30 }} />
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/contact">
+            <FaPhoneAlt style={{ width: 30 }} />
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/animals">
+            <FaKiwiBird style={{ width: 30 }} />
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link">
+            <Resume />
           </div>
-        </div>
-      </nav>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</MobileView>
 
-
-
-      </MobileView>
 
     </div>
   );
