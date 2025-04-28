@@ -59,7 +59,7 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <div className="nav-link" >
-                <a href='/resume_2023.pdf' download>Download</a>
+                <a href='/resume_2025.pdf' download>Download</a>
                   </div>
               </li>
             </ul>

@@ -2,7 +2,7 @@ import React, { Text, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { isMobile } from "react-device-detect";
-import pdfFile from "./resume_2023.pdf";
+import pdfFile from "./resume_2025.pdf";
 
 import SinglePagePDFViewer from "./single-page";
 
