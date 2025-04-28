@@ -44,6 +44,7 @@ const Heineken = () => {
   const handleSubmit = (e) => {
     handleShow();
   };
+  
   useEffect(() => {
     if (isMobile) {
       setMobile(true);

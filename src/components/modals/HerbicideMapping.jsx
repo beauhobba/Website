@@ -1,16 +1,17 @@
-import React, {useState} from "react";
-import weed_farm from '../../images/weed_farm.png'
-import CardTile from "../cards/CardTile"
+import React, { useState, useEffect } from "react";
+import weed_farm from '../../images/weed_farm.png';
+import CardTile from "../cards/CardTile";
 import { Modal } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { isMobile } from "react-device-detect";
 
-import hein1 from '../../images/heinken/hein1.png'
-import hein2 from '../../images/heinken/hein2.png'
-import hein3 from '../../images/heinken/hein3.png'
-import hein4 from '../../images/heinken/hein4.png'
+import hein1 from '../../images/heinken/hein1.png';
+import hein2 from '../../images/heinken/hein2.png';
+import hein3 from '../../images/heinken/hein3.png';
+import hein4 from '../../images/heinken/hein4.png';
 
-import pdfFile from "./herbicidemapping.pdf"
+import pdfFile from "./herbicidemapping.pdf";
 
 import SinglePagePDFViewer from "./single-page";
 
@@ -35,22 +36,29 @@ const images = [
 
 const HerbicideMapping = () => {
     const [show, setShow] = React.useState(false);
+    const [mobile, setMobile] = React.useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
-    const class_text = "Herbicide Mapping"
+    const class_text = "Herbicide Mapping";
 
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
-      }
+    }
 
     const handleSubmit = (e) => {
       handleShow();
     };
+
+    useEffect(() => {
+        if (isMobile) {
+            setMobile(true);
+        }
+    }, []);
 
     return(
     <><div class="col-sm">
@@ -61,13 +69,26 @@ const HerbicideMapping = () => {
         />
         </div>
         <Modal show={show} onHide={handleClose} size="lg">
+          {mobile ? (
+            <div
+              onClick={handleClose}
+              style={{
+                justifyContent: "flex-end",
+                display: "flex",
+                paddingRight: 10,
+              }}
+            >
+              <p style={{ fontSize: 30, marginTop: 0 }}>
+                <b>x</b>
+              </p>
+            </div>
+          ) : null}
 
             <Modal.Title style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}>
                 <div>
                     <h1 class="font-weight-light" size="lg">
                     {class_text}
                     </h1>
-
                 </div>
             </Modal.Title>
 
@@ -126,4 +147,4 @@ const HerbicideMapping = () => {
     )
 }
 
-export default HerbicideMapping
+export default HerbicideMapping;

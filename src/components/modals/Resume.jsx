@@ -29,26 +29,21 @@ const Resume = () => {
       <div className="nav-item">
         <p onClick={() => handleSubmit()}>{"Resume"}</p>
       </div>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        size={mobile ? null : "lg"}
-        style={mobile ? { width: "100%" } : null}
-      >
-        {mobile ? (
-          <div
-            onClick={handleClose}
-            style={{
-              justifyContent: "flex-end",
-              display: "flex",
-              paddingRight: 10,
-            }}
-          >
-            <p style={{ fontSize: 30, marginTop: 0 }}>
-              <b>x</b>
-            </p>
-          </div>
-        ) : null}
+        <Modal show={show} onHide={handleClose} size={mobile ? null : "lg"}>
+          {mobile ? (
+            <div
+              onClick={handleClose}
+              style={{
+                justifyContent: "flex-end",
+                display: "flex",
+                paddingRight: 10,
+              }}
+            >
+              <p style={{ fontSize: 30, marginTop: 0 }}>
+                <b>x</b>
+              </p>
+            </div>
+          ) : null}
         <Modal.Title
           style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}
         >

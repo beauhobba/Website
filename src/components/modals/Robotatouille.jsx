@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import { isMobile } from "react-device-detect";
 import cooking_robot from '../../images/cooking_robot.png'
 import CardTile from "../cards/CardTile"
 import { Modal } from "react-bootstrap";
@@ -43,6 +44,7 @@ const images = [
 const Robotatouille = () => {
     const [show, setShow] = React.useState(false);
 
+    const [mobile, setMobile] = React.useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
@@ -50,7 +52,11 @@ const Robotatouille = () => {
 
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
-
+    useEffect(() => {
+        if (isMobile) {
+            setMobile(true);
+        }
+    }, []);
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
       }
@@ -68,6 +74,20 @@ const Robotatouille = () => {
         />
         </div>
         <Modal show={show} onHide={handleClose} size="lg">
+        {mobile ? (
+            <div
+              onClick={handleClose}
+              style={{
+                justifyContent: "flex-end",
+                display: "flex",
+                paddingRight: 10,
+              }}
+            >
+              <p style={{ fontSize: 30, marginTop: 0 }}>
+                <b>x</b>
+              </p>
+            </div>
+          ) : null}
 
             <Modal.Title style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}>
                 <div>

@@ -1,4 +1,5 @@
-import React, {Text} from "react";
+import React, { useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import heinkein_arm from '../../images/robot_arms_heinkein.png'
 import CardTile from "../cards/CardTile"
 import { Modal } from "react-bootstrap";
@@ -50,6 +51,7 @@ const images = [
 const Roost = () => {
     const [show, setShow] = React.useState(false);
 
+    const [mobile, setMobile] = React.useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
@@ -58,7 +60,11 @@ const Roost = () => {
     const handleSubmit = (e) => {
       handleShow();
     };
-
+    useEffect(() => {
+        if (isMobile) {
+            setMobile(true);
+        }
+    }, []);
     return(
     <><div class="col-sm">
         <CardTile
@@ -68,6 +74,20 @@ const Roost = () => {
         />
         </div>
         <Modal show={show} onHide={handleClose} size="lg">
+          {mobile ? (
+            <div
+              onClick={handleClose}
+              style={{
+                justifyContent: "flex-end",
+                display: "flex",
+                paddingRight: 10,
+              }}
+            >
+              <p style={{ fontSize: 30, marginTop: 0 }}>
+                <b>x</b>
+              </p>
+            </div>
+          ) : null}
 
             <Modal.Title style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}>
                 <div>

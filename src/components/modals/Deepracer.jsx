@@ -1,8 +1,10 @@
-import React, {Text} from "react";
+import React, {Text, useEffect} from "react";
 import CardTile from "../cards/CardTile"
 import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
+import { isMobile } from "react-device-detect";
+
 
 import deepracer_1 from '../../images/Deepracer/deepracer_1.png'
 import deepracer_2 from '../../images/Deepracer/deepracer_2.PNG'
@@ -24,8 +26,15 @@ const images = [
 const Deepracer = () => {
     const [show, setShow] = React.useState(false);
 
+    const [mobile, setMobile] = React.useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    useEffect(() => {
+        if (isMobile) {
+            setMobile(true);
+        }
+    }, []);
   
     const class_text = "Deepracer"
 
@@ -42,6 +51,20 @@ const Deepracer = () => {
         />
         </div>
         <Modal show={show} onHide={handleClose} size="lg">
+          {mobile ? (
+            <div
+              onClick={handleClose}
+              style={{
+                justifyContent: "flex-end",
+                display: "flex",
+                paddingRight: 10,
+              }}
+            >
+              <p style={{ fontSize: 30, marginTop: 0 }}>
+                <b>x</b>
+              </p>
+            </div>
+          ) : null}
 
             <Modal.Title style={{ paddingLeft: 10, display: "flex", justifyContent: "center" }}>
                 <div>
