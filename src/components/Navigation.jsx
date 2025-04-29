@@ -4,7 +4,7 @@ import Resume from "./modals/Resume";
 import {BrowserView, MobileView} from 'react-device-detect';
 import { FaHome, FaMoneyBillWave, FaPhoneAlt, FaKiwiBird, FaBlogger, FaPeopleCarry, FaAddressCard, FaLaptopCode } from "react-icons/fa";
 import { FaGamepad } from "react-icons/fa";
-
+import resumePDF from "./modals/resume_2025.pdf"
 
 function Navigation() {
   return (
@@ -59,7 +59,7 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <div className="nav-link" >
-                <a href='/resume_2025.pdf' download>Download</a>
+                <a href={resumePDF} download>Download</a>
                   </div>
               </li>
             </ul>
