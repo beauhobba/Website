@@ -4,7 +4,7 @@ import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import { isMobile } from "react-device-detect";
-
+import ReactPlayer from "react-player";
 
 import deepracer_1 from '../../images/Deepracer/deepracer_1.png'
 import deepracer_2 from '../../images/Deepracer/deepracer_2.PNG'
@@ -99,6 +99,18 @@ const Deepracer = () => {
                     <br>
                     </br>
                     <h4 class="font-weight-light">
+                                            Media
+                                        </h4>
+                                        <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
+                    
+                                <div style={{ display: "flex", justifyContent: "center" }}>
+                                  <ReactPlayer url="https://youtube.com/shorts/1GoyAYqI5Xs?feature=share" />
+                                </div>
+                                        <br>
+                                        </br>
+                                        <br>
+                                        </br>
+                                        <h4 class="font-weight-light">
                         Gallery
                     </h4>
                     <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
