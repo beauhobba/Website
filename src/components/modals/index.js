@@ -8,3 +8,6 @@ export { default as Shuffleboard } from "./Shuffleboard";
 export { default as Blackjack } from "./Blackjack";
 export {default as Deepracer} from "./Deepracer"
 export {default as SmartTrafficLantern} from "./SmartTrafficLanterns"
+export {default as EVChargingMap} from "./EVChargingMap"
+export {default as ElectricCouncilMap} from "./EVCouncilPulse"
+export {default as InspectorRobot} from "./Inspector"

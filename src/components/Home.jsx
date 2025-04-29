@@ -8,7 +8,7 @@ import white from "../images/white.png";
 import smarttrafficlantern from "../images/smarttrafficlight.png"
 import CardTile from "./cards/CardTile";
 
-import {Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
+import {EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
 
 
 
@@ -63,9 +63,7 @@ function Home() {
           }}
         >
           <div class="row">
-            <div class="col-sm">
-              <CardTile photo={inspector} text={"Inspector"} />
-            </div>
+            <InspectorRobot></InspectorRobot>
 
             <div class="col-sm">
               <CardTile photo={brick} text={"Brick"} />
@@ -141,12 +139,8 @@ function Home() {
             <div class="col-sm">
               <CardTile photo={white} text={"ANCAP Reporting Tools"} />
             </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"Council Pulse"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"Electric Vehicle Charging Stations Map"} />
-            </div>
+            <ElectricCouncilMap></ElectricCouncilMap>
+            <EVChargingMap></EVChargingMap>
 
           </div>
         </div>
