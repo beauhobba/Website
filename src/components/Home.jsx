@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import coverphoto from "../images/coverphoto.png";
 import white from "../images/white.png";
 import CardTile from "./cards/CardTile";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 import {
   Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
