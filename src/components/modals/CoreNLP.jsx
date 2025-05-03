@@ -41,7 +41,7 @@ const CoreNLP = () => {
                 <Modal.Body>
                     <div className="font-weight-light">
 
-                        <h4 className="font-weight-light">My Contributions</h4>
+                        <h4 className="font-weight-light">Descriptions</h4>
                         <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
                         <p>
                             As part of AKIN AI I developed a <strong>voice auto-calibration system</strong> to improve NLP performance in noisy environments. This involved sampling ambient noise across 16 audio channels and dynamically adjusting input thresholds. I had to overcome challenges related to Linux sound configuration and hardware limitations (Matrix mic), but ultimately delivered a system that significantly improved robustness for voice recognition especially in field settings like the Inspector Robot.

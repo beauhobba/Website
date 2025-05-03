@@ -48,7 +48,7 @@ const PyChat = () => {
                 <Modal.Body>
                     <div className="font-weight-light">
 
-                        <h4 className="font-weight-light">My Contributions</h4>
+                        <h4 className="font-weight-light">Descriptions</h4>
                         <hr style={{ colour: "black", backgroundColour: "white", height: 5 }} />
 
                         <p>

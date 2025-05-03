@@ -8,7 +8,7 @@ import white from "../images/white.png";
 import smarttrafficlantern from "../images/smarttrafficlight.png"
 import CardTile from "./cards/CardTile";
 
-import {PyChat, CoreNLP, EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
+import {Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
 
 
 
@@ -65,9 +65,7 @@ function Home() {
           <div class="row">
             <InspectorRobot></InspectorRobot>
 
-            <div class="col-sm">
-              <CardTile photo={brick} text={"Brick"} />
-            </div>
+            <Brick></Brick>
 
             <PyChat></PyChat>
           </div>
