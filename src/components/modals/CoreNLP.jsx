@@ -1,18 +1,11 @@
 import React from "react";
 import CardTile from "../cards/CardTile";
 import { Modal } from "react-bootstrap";
-import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-// Placeholder image (replace with real if available)
 import coreNLPImage from '../../images/CoreNLP/core_NLP.png';
 
-// const images = [
-//     {
-//         original: coreNLPImage,
-//         thumbnail: coreNLPImage,
-//     },
-// ];
+
 
 const CoreNLP = () => {
     const [show, setShow] = React.useState(false);
@@ -70,10 +63,6 @@ const CoreNLP = () => {
                             <li>NLP tooling: Lemmatization, POS tagging, tokenization</li>
                             <li>Custom testing suite development</li>
                         </ul>
-
-                        {/* <h4 className="font-weight-light">Gallery</h4>
-                        <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
-                        <ImageGallery items={images} /> */}
 
                     </div>
                 </Modal.Body>
