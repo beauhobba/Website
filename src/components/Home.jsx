@@ -96,12 +96,19 @@ function Home() {
         {/* Projects: 3 per row */}
         {chunkedProjects.map((row, rowIndex) => (
   <div className="row" key={rowIndex} style={{ marginBottom: "20px" }}>
-    {row.map((project) => (
-      <div className="col-sm" key={project.id}>
-        {project.component}
-      </div>
-    ))}
-    {/* Add invisible cols to pad the row if < 3 items */}
+    {row.map((project) => {
+      const isCardTile = project.component.type?.name === "CardTile";
+
+      return isCardTile ? (
+        <div className="col-sm" key={project.id}>
+          {project.component}
+        </div>
+      ) : (
+        <React.Fragment key={project.id}>{project.component}</React.Fragment>
+      );
+    })}
+
+    {/* Fill remaining columns to simulate 3 per row */}
     {Array.from({ length: 3 - row.length }).map((_, i) => (
       <div className="col-sm" key={`placeholder-${rowIndex}-${i}`} style={{ visibility: "hidden" }}>
         Placeholder
