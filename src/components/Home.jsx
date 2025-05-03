@@ -1,209 +1,109 @@
-import React, { Text } from "react";
+import React, { useState } from "react";
 import coverphoto from "../images/coverphoto.png";
-import brick from "../images/brick.png";
-import Deepracer from "./modals/Deepracer";
-import pychat from "../images/pychat.png";
-import inspector from "../images/inspector.png";
 import white from "../images/white.png";
-import smarttrafficlantern from "../images/smarttrafficlight.png"
 import CardTile from "./cards/CardTile";
 
-import {Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
+import {
+  Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
+  ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping,
+  Robotatouille, Roost, Blackjack, AustraliaDatabases,
+  SmartTrafficLantern, Deepracer
+} from "./modals";
 
-
-
+// All project modules centralized
+const projects = [
+  { id: "heineken", year: 2023, component: <Heineken /> },
+  { id: "herbicide", year: 2022, component: <HerbicideMapping /> },
+  { id: "robotatouille", year: 2022, component: <Robotatouille /> },
+  { id: "inspector", year: 2023, component: <InspectorRobot /> },
+  { id: "brick", year: 2024, component: <Brick /> },
+  { id: "pychat", year: 2023, component: <PyChat /> },
+  { id: "corenlp", year: 2023, component: <CoreNLP /> },
+  { id: "roost", year: 2022, component: <Roost /> },
+  { id: "australia-db", year: 2024, component: <AustraliaDatabases /> },
+  { id: "deepracer", year: 2022, component: <Deepracer /> },
+  { id: "shuffleboard", year: 2023, component: <Shuffleboard /> },
+  { id: "blackjack", year: 2023, component: <Blackjack /> },
+  { id: "smarttraffic", year: 2024, component: <SmartTrafficLantern /> },
+  { id: "electric-council", year: 2023, component: <ElectricCouncilMap /> },
+  { id: "ev-charging", year: 2023, component: <EVChargingMap /> },
+  { id: "nrl", year: 2023, component: <CardTile photo={white} text={"NRL Open Source Tools"} /> },
+  { id: "animal-detect", year: 2023, component: <CardTile photo={white} text={"Pale Pavements and AI Animal Detection"} /> },
+  { id: "ancap", year: 2023, component: <CardTile photo={white} text={"ANCAP Reporting Tools"} /> },
+  { id: "lantern-pubsub", year: 2024, component: <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} /> },
+  { id: "harbour-tunnel", year: 2024, component: <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} /> },
+  { id: "mcad", year: 2023, component: <CardTile photo={white} text={"MCAD"} /> },
+  { id: "chippendale", year: 2023, component: <CardTile photo={white} text={"Chippendale C-ITS Project"} /> },
+  { id: "careful", year: 2024, component: <CardTile photo={white} text={"CAREFUL Buses"} /> },
+  { id: "ev-trailer", year: 2024, component: <CardTile photo={white} text={"EV Recovery Trailer"} /> },
+  { id: "geospan", year: 2024, component: <CardTile photo={white} text={"Geospan"} /> },
+  { id: "lidar-cpm", year: 2024, component: <CardTile photo={white} text={"LiDAR CPM Creator"} /> },
+  { id: "itlp", year: 2024, component: <CardTile photo={white} text={"ITLP"} /> }
+];
 
 function Home() {
+  const [selectedYear, setSelectedYear] = useState("all");
+
+  const displayedProjects =
+    selectedYear === "all"
+      ? projects
+      : projects.filter((p) => p.year.toString() === selectedYear);
+
+  // Split into chunks of 3 for rows
+  const chunkedProjects = [];
+  for (let i = 0; i < displayedProjects.length; i += 3) {
+    chunkedProjects.push(displayedProjects.slice(i, i + 3));
+  }
+
   return (
     <div>
-      <div
-        class="container"
-        style={{
-          paddingBottom: "80px",
-        }}
-      >
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src={coverphoto}
-              alt=""
-            />
+      <div className="container" style={{ paddingBottom: "80px" }}>
+        {/* Header */}
+        <div className="row align-items-center my-5">
+          <div className="col-lg-7">
+            <img className="img-fluid rounded mb-4 mb-lg-0" src={coverphoto} alt="" />
           </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Hi, I'm Beau</h1>
+          <div className="col-lg-5">
+            <h1 className="font-weight-light">Hi, I'm Beau</h1>
             <p>
-              and I like robots. Here are some projects I have worked on...{" "}
-              <br></br>
+              and I like robots. Here are some projects I have worked on... <br />
               <i>🚧 Note this website is still under construction 🚧</i>
             </p>
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <div class="row">
-            <Heineken> </Heineken>
-
-            <HerbicideMapping> </HerbicideMapping>
-
-            <Robotatouille> </Robotatouille>
+        {/* Year Filter Dropdown */}
+        <div className="row" style={{ paddingBottom: "20px" }}>
+          <div className="col">
+            <label style={{ marginRight: "10px" }}>Filter by Year:</label>
+            <select
+              onChange={(e) => setSelectedYear(e.target.value)}
+              value={selectedYear}
+            >
+              <option value="all">All</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <InspectorRobot></InspectorRobot>
-
-            <Brick></Brick>
-
-            <PyChat></PyChat>
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <CoreNLP></CoreNLP>
-
-            <Roost> </Roost>
-            <AustraliaDatabases />
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <Deepracer/>
-
-
-              <Shuffleboard></Shuffleboard>
-            <Blackjack></Blackjack>
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"NRL Open Source Tools"} />
-            </div>
-  
-              <SmartTrafficLantern></SmartTrafficLantern>
-              <div class="col-sm">
-              <CardTile photo={white} text={"Pale Pavements and AI Animal Detection"} />
-            </div>
-
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"ANCAP Reporting Tools"} />
-            </div>
-            <ElectricCouncilMap></ElectricCouncilMap>
-            <EVChargingMap></EVChargingMap>
-
-          </div>
-        </div>
-
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"MCAD"} />
-            </div>
-
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"Chippendale C-ITS Project"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"CAREFUL Buses"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"EV Recovery Trailer"} />
-            </div>
-
-          </div>
-
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            paddingTop: "20px",
-          }}
-        >
-          <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"Geospan"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"LiDAR CPM Creator"} />
-            </div>
-            <div class="col-sm">
-              <CardTile photo={white} text={"ITLP"} />
-            </div>
-
-          </div>
-
-        </div>
+        {/* Projects: 3 per row */}
+        {chunkedProjects.map((row, rowIndex) => (
+  <div className="row" key={rowIndex} style={{ marginBottom: "20px" }}>
+    {row.map((project) => (
+      <div className="col-sm" key={project.id}>
+        {project.component}
+      </div>
+    ))}
+    {/* Add invisible cols to pad the row if < 3 items */}
+    {Array.from({ length: 3 - row.length }).map((_, i) => (
+      <div className="col-sm" key={`placeholder-${rowIndex}-${i}`} style={{ visibility: "hidden" }}>
+        Placeholder
+      </div>
+    ))}
+  </div>
+))}
 
       </div>
     </div>
