@@ -6,9 +6,9 @@ import {isMobile } from "react-device-detect";
 
 import BlackjackImg from "../../images/blackjack.png"
 
-import BlackjackImg1 from "../../images/blackjack/card_counter_1.PNG"
-import BlackjackImg2 from "../../images/blackjack/card_counter_2.PNG"
-import BlackjackImg3 from "../../images/blackjack/card_counter_3.PNG"
+import BlackjackImg1 from "../../images/blackjack/card_counter_1.png"
+import BlackjackImg2 from "../../images/blackjack/card_counter_2.png"
+import BlackjackImg3 from "../../images/blackjack/card_counter_3.png"
 import ImageGallery from 'react-image-gallery';
 import ShuffleboardImg from "../../images/shuffleboardcv.png"
 

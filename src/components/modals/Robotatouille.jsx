@@ -9,7 +9,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import Robotatouille1 from '../../images/Robotatouille/Robotatouille1.png'
 import Robotatouille2 from '../../images/Robotatouille/Robotatouille2.png'
 import Robotatouille3 from '../../images/Robotatouille/Robotatouille3.png'
-import Robotatouille4 from '../../images/Robotatouille/Robotatouille4.PNG'
+import Robotatouille4 from '../../images/Robotatouille/Robotatouille4.png'
 import Robotatouille5 from '../../images/Robotatouille/Robotatouille5.jpg'
 
 import robot from '../../images/Robotatouille/rat.png'
