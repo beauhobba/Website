@@ -12,42 +12,44 @@ import {
 
 // All project modules centralized
 const projects = [
-  { id: "heineken", year: 2023, component: <Heineken /> },
-  { id: "herbicide", year: 2022, component: <HerbicideMapping /> },
-  { id: "robotatouille", year: 2022, component: <Robotatouille /> },
-  { id: "inspector", year: 2023, component: <InspectorRobot /> },
-  { id: "brick", year: 2024, component: <Brick /> },
-  { id: "pychat", year: 2023, component: <PyChat /> },
-  { id: "corenlp", year: 2023, component: <CoreNLP /> },
-  { id: "roost", year: 2022, component: <Roost /> },
-  { id: "australia-db", year: 2024, component: <AustraliaDatabases /> },
-  { id: "deepracer", year: 2022, component: <Deepracer /> },
-  { id: "shuffleboard", year: 2023, component: <Shuffleboard /> },
-  { id: "blackjack", year: 2023, component: <Blackjack /> },
-  { id: "smarttraffic", year: 2024, component: <SmartTrafficLantern /> },
-  { id: "electric-council", year: 2023, component: <ElectricCouncilMap /> },
-  { id: "ev-charging", year: 2023, component: <EVChargingMap /> },
-  { id: "nrl", year: 2023, component: <CardTile photo={white} text={"NRL Open Source Tools"} /> },
-  { id: "animal-detect", year: 2023, component: <CardTile photo={white} text={"Pale Pavements and AI Animal Detection"} /> },
-  { id: "ancap", year: 2023, component: <CardTile photo={white} text={"ANCAP Reporting Tools"} /> },
-  { id: "lantern-pubsub", year: 2024, component: <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} /> },
-  { id: "harbour-tunnel", year: 2024, component: <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} /> },
-  { id: "mcad", year: 2023, component: <CardTile photo={white} text={"MCAD"} /> },
-  { id: "chippendale", year: 2023, component: <CardTile photo={white} text={"Chippendale C-ITS Project"} /> },
-  { id: "careful", year: 2024, component: <CardTile photo={white} text={"CAREFUL Buses"} /> },
-  { id: "ev-trailer", year: 2024, component: <CardTile photo={white} text={"EV Recovery Trailer"} /> },
-  { id: "geospan", year: 2024, component: <CardTile photo={white} text={"Geospan"} /> },
-  { id: "lidar-cpm", year: 2024, component: <CardTile photo={white} text={"LiDAR CPM Creator"} /> },
-  { id: "itlp", year: 2024, component: <CardTile photo={white} text={"ITLP"} /> }
+  { id: "heineken", year: [2021], component: <Heineken /> },
+  { id: "herbicide", year: [2020, 2021], component: <HerbicideMapping /> },
+  { id: "robotatouille", year: [2020], component: <Robotatouille /> },
+  { id: "inspector", year: [2021, 2022], component: <InspectorRobot /> },
+  { id: "brick", year: [2022], component: <Brick /> }, 
+  { id: "pychat", year: [2021, 2022], component: <PyChat /> },
+  { id: "corenlp", year: [2021, 2022], component: <CoreNLP /> },
+  { id: "roost", year: [2023, 2024, 2025], component: <Roost /> },
+  { id: "australia-db", year: [2024], component: <AustraliaDatabases /> },
+  { id: "deepracer", year: [2022], component: <Deepracer /> },
+  { id: "shuffleboard", year: [2021], component: <Shuffleboard /> },
+  { id: "blackjack", year: [2020], component: <Blackjack /> },
+  { id: "smarttraffic", year: [2024], component: <SmartTrafficLantern /> },
+  { id: "electric-council", year: [2024, 2025], component: <ElectricCouncilMap /> }, 
+  { id: "ev-charging", year: [2024], component: <EVChargingMap /> },
+  { id: "nrl", year: [2024, 2025], component: <CardTile photo={white} text={"NRL Open Source Tools"} /> },
+  { id: "animal-detect", year: [2025], component: <CardTile photo={white} text={"Pale Pavements and AI Animal Detection"} /> },
+  { id: "ancap", year: [2023, 2024, 2025], component: <CardTile photo={white} text={"ANCAP Reporting Tools"} /> },
+  { id: "lantern-pubsub", year: [2025], component: <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} /> },
+  { id: "harbour-tunnel", year: [2025], component: <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} /> },
+  { id: "mcad", year: [2024, 2025], component: <CardTile photo={white} text={"MCAD"} /> },
+  { id: "chippendale", year: [2024], component: <CardTile photo={white} text={"Chippendale C-ITS Project"} /> },
+  { id: "careful", year: [2025], component: <CardTile photo={white} text={"CAREFUL Buses"} /> },
+  { id: "ev-trailer", year: [2025], component: <CardTile photo={white} text={"EV Recovery Trailer"} /> },
+  { id: "geospan", year: [2025], component: <CardTile photo={white} text={"Geospan"} /> },
+  { id: "lidar-cpm", year: [2025], component: <CardTile photo={white} text={"LiDAR CPM Creator"} /> },
+  { id: "itlp", year: [2024], component: <CardTile photo={white} text={"ITLP"} /> }
 ];
+
 
 function Home() {
   const [selectedYear, setSelectedYear] = useState("all");
 
   const displayedProjects =
-    selectedYear === "all"
-      ? projects
-      : projects.filter((p) => p.year.toString() === selectedYear);
+  selectedYear === "all"
+    ? projects
+    : projects.filter((p) => p.year.includes(parseInt(selectedYear)));
+
 
   // Split into chunks of 3 for rows
   const chunkedProjects = [];
@@ -81,9 +83,12 @@ function Home() {
               value={selectedYear}
             >
               <option value="all">All</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
               <option value="2022">2022</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
+              <option value="2025">2025</option>
             </select>
           </div>
         </div>
