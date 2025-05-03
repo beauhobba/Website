@@ -8,7 +8,7 @@ import white from "../images/white.png";
 import smarttrafficlantern from "../images/smarttrafficlight.png"
 import CardTile from "./cards/CardTile";
 
-import {EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
+import {CoreNLP, EVChargingMap, InspectorRobot, ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping, Robotatouille, Roost, Blackjack, AustraliaDatabases, SmartTrafficLantern} from "./modals"
 
 
 
@@ -83,9 +83,7 @@ function Home() {
           }}
         >
           <div class="row">
-            <div class="col-sm">
-              <CardTile photo={white} text={"CoreNLP"} />
-            </div>
+            <CoreNLP></CoreNLP>
 
             <Roost> </Roost>
             <AustraliaDatabases />
