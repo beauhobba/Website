@@ -4,9 +4,9 @@ import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import councilmap from '../../images/EVCouncil/council_pulse1.PNG';
-import councilmap2 from '../../images/EVCouncil/council_pulse2.PNG';
-import councilmap3 from '../../images/EVCouncil/council_pulse3.PNG';
+import councilmap from '../../images/EVCouncil/council_pulse1.png';
+import councilmap2 from '../../images/EVCouncil/council_pulse2.png';
+import councilmap3 from '../../images/EVCouncil/council_pulse3.png';
 
 const images = [
     {

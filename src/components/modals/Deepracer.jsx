@@ -7,7 +7,7 @@ import { isMobile } from "react-device-detect";
 import ReactPlayer from "react-player";
 
 import deepracer_1 from '../../images/Deepracer/deepracer_1.png'
-import deepracer_2 from '../../images/Deepracer/deepracer_2.PNG'
+import deepracer_2 from '../../images/Deepracer/deepracer_2.png'
 import deepracer from "../../images/deepracer.png";
 
 

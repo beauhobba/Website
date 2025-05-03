@@ -4,10 +4,10 @@ import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import evmap1 from '../../images/EVChargingMap/electric_vehicle_charging_map.PNG';
-import evmap2 from '../../images/EVChargingMap/electric_vehicle_charging_map2.PNG';
-import evmap3 from '../../images/EVChargingMap/electric_vehicle_charging_map3.PNG';
-import evmap4 from '../../images/EVChargingMap/electric_vehicle_charging_map4.PNG';
+import evmap1 from '../../images/EVChargingMap/electric_vehicle_charging_map.png';
+import evmap2 from '../../images/EVChargingMap/electric_vehicle_charging_map2.png';
+import evmap3 from '../../images/EVChargingMap/electric_vehicle_charging_map3.png';
+import evmap4 from '../../images/EVChargingMap/electric_vehicle_charging_map4.png';
 
 const images = [
     {
