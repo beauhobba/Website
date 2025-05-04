@@ -1,35 +1,15 @@
 import React from "react";
-import {
-    Card,
-    CardBlock,
-    CardTitle,
-    CardImg,
-    CardImgOverlay
-  } from 'react-bootstrap-card';
+import Card from 'react-bootstrap/Card';
 
-const CardTile = (props) => {
+const CardTile = ({ event, photo, text }) => {
+  return (
+    <Card onClick={event} className="h-100 text-white">
+      <Card.Img src={photo} alt="Card image" />
+      <Card.ImgOverlay className="d-flex align-items-center justify-content-center" style={{ backgroundColor: 'rgba(90, 90, 90, 0.35)' }}>
+        <Card.Title className="font-weight-light">{text}</Card.Title>
+      </Card.ImgOverlay>
+    </Card>
+  );
+};
 
-
-    return (
-        <Card onClick={props.event} >
-        <CardBlock>
-        <CardImg
-            src={props.photo}
-            alt=""
-          />
-        <CardImgOverlay style={{ display:'flex', justifyContent:'center', alignItems: 'center', backgroundColor: 'rgba(90, 90, 90, 0.35)'}}>
-          <CardTitle  style={{ color: 'white', fontWeight:"light" }} >
-          <p  class="font-weight-light">
-
-            {props.text}
-            </p>
-          </CardTitle>
-        </CardImgOverlay>
-
-        </CardBlock>
-      </Card>
-    )
-    
-}
-
-export default CardTile
+export default CardTile;

@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import {
-  Chippendale, NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
+  Geospan, Chippendale, NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
   ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping,
   Robotatouille, Roost, Blackjack, AustraliaDatabases,
   SmartTrafficLantern, Deepracer
@@ -39,7 +39,7 @@ const projects = [
   { id: "chippendale", year: [2024], component: <Chippendale/> },
   { id: "careful", year: [2025], component: <CardTile photo={white} text={"CAREFUL Buses"} /> },
   { id: "ev-trailer", year: [2025], component: <CardTile photo={white} text={"EV Recovery Trailer"} /> },
-  { id: "geospan", year: [2025], component: <CardTile photo={white} text={"Geospan"} /> },
+  { id: "geospan", year: [2025], component: <Geospan/> },
   { id: "lidar-cpm", year: [2025], component: <CardTile photo={white} text={"LiDAR CPM Creator"} /> },
   { id: "itlp", year: [2024], component: <CardTile photo={white} text={"ITLP"} /> }
 ];
