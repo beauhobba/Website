@@ -4,18 +4,16 @@ import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-// Sample images for Inspector Robot (replace with real ones later)
-import inspector1 from '../../images/Inspector/inspector.png';
-import inspector2 from '../../images/Inspector/inspector_2.png';
+import { image_library } from "./media"; 
 
 const images = [
     {
-      original: inspector2,
-      thumbnail: inspector2,
+      original: image_library.inspector_2,
+      thumbnail: image_library.inspector_2,
     },
     {
-      original: inspector1,
-      thumbnail: inspector1,
+      original: image_library.inspector,
+      thumbnail: image_library.inspector,
     },
 ];
 
@@ -31,11 +29,12 @@ const InspectorRobot = () => {
       handleShow();
     };
 
+
     return (
     <>
         <div className="col-sm">
             <CardTile
-                photo={inspector1}
+                photo={image_library.inspector}
                 text={class_text}
                 event={() => handleSubmit()}
             />

@@ -8,7 +8,7 @@ function Footer() {
     }}>
         <div class="container">
           <p class="m-0 text-center text-black">
-            Copyright &copy; beauhobba.com 2023
+            Copyright &copy; beauhobba.com 2025
           </p>
         </div>
       </footer>
