@@ -20,3 +20,8 @@ export const video_library = {
   inspector_tracking: `${base}Inspector/inspector_tracking_compressed.mp4`,
 
 };
+
+export const pdf_library = {
+  resume: `${base}Resume/resume_2025.pdf`,
+
+};

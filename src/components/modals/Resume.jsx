@@ -2,7 +2,10 @@ import React, { Text, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { isMobile } from "react-device-detect";
-import pdfFile from "./resume_2025.pdf";
+
+import { pdf_library } from "./media";
+
+
 
 import SinglePagePDFViewer from "./single-page";
 
@@ -56,7 +59,7 @@ const Resume = () => {
 
         <Modal.Body>
           <div class="font-weight-light">
-            <SinglePagePDFViewer pdf={pdfFile} />
+            <SinglePagePDFViewer pdf={pdf_library.resume} />
           </div>
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
