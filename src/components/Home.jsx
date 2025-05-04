@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import {
-  NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
+  Chippendale, NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
   ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping,
   Robotatouille, Roost, Blackjack, AustraliaDatabases,
   SmartTrafficLantern, Deepracer
@@ -36,7 +36,7 @@ const projects = [
   { id: "lantern-pubsub", year: [2025], component: <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} /> },
   { id: "harbour-tunnel", year: [2025], component: <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} /> },
   { id: "mcad", year: [2024, 2025], component: <CardTile photo={white} text={"MCAD"} /> },
-  { id: "chippendale", year: [2024], component: <CardTile photo={white} text={"Chippendale C-ITS Project"} /> },
+  { id: "chippendale", year: [2024], component: <Chippendale/> },
   { id: "careful", year: [2025], component: <CardTile photo={white} text={"CAREFUL Buses"} /> },
   { id: "ev-trailer", year: [2025], component: <CardTile photo={white} text={"EV Recovery Trailer"} /> },
   { id: "geospan", year: [2025], component: <CardTile photo={white} text={"Geospan"} /> },
@@ -111,7 +111,7 @@ function Home() {
       const isCardTile = project.component.type?.name === "CardTile";
 
       return isCardTile ? (
-        <div className="col-sm" key={project.id}>
+        <div className="col-12 col-sm-6 col-md-4" key={project.id}>
           {project.component}
         </div>
       ) : (
@@ -121,7 +121,7 @@ function Home() {
 
     {/* Fill remaining columns to simulate 3 per row */}
     {Array.from({ length: 3 - row.length }).map((_, i) => (
-      <div className="col-sm" key={`placeholder-${rowIndex}-${i}`} style={{ visibility: "hidden" }}>
+      <div className="col-12 col-sm-6 col-md-4" key={`placeholder-${rowIndex}-${i}`} style={{ visibility: "hidden" }}>
         Placeholder
       </div>
     ))}
