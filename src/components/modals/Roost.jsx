@@ -1,50 +1,42 @@
 import React, { useEffect } from "react";
 import { isMobile } from "react-device-detect";
-import heinkein_arm from '../../images/robot_arms_heinkein.png'
 import CardTile from "../cards/CardTile"
 import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import ReactPlayer from "react-player";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import roost from '../../images/Roost/roost_game.png'
-import box from "../../images/Roost/box.gif";
-import roost1 from '../../images/Roost/roost1.png'
-import roost2 from '../../images/Roost/roost2.png'
-import roost3 from '../../images/Roost/roost3.png'
-import roost4 from '../../images/Roost/roost4.png'
-import roost5 from '../../images/Roost/roost5.png'
-import roost6 from '../../images/Roost/roost6.png'
+import { image_library } from "./media";
 
 
 const images = [
     {
-      original: roost,
-      thumbnail: roost,
+      original: image_library.roost1,
+      thumbnail: image_library.roost1,
     },
     {
-      original: roost1,
-      thumbnail: roost1,
+      original: image_library.roost2,
+      thumbnail: image_library.roost2,
     },
     {
-      original: roost2,
-      thumbnail: roost2,
+      original: image_library.roost3,
+      thumbnail: image_library.roost3,
     },
     {
-      original: roost3,
-      thumbnail: roost3,
+      original: image_library.roost4,
+      thumbnail: image_library.roost4,
     },
     {
-        original: roost4,
-        thumbnail: roost4,
+        original: image_library.roost5,
+        thumbnail: image_library.roost5,
       },
       {
-        original: roost5,
-        thumbnail: roost5,
+        original: image_library.roost6,
+        thumbnail: image_library.roost6,
       },
       {
-        original: roost6,
-        thumbnail: roost6,
+        original: image_library.roost_game,
+        thumbnail: image_library.roost_game,
       },
   ];
 
@@ -68,7 +60,7 @@ const Roost = () => {
     return(
     <><div class="col-sm">
         <CardTile
-            photo={roost}
+            photo={image_library.roost_game}
             text={class_text}
             event={() => handleSubmit()} 
         />
@@ -110,7 +102,7 @@ const Roost = () => {
                     </br>
                     <div style={{ justifyItems: "center", display: 'flex', alignContent: 'center', alignItems: 'center', width: '50%' }}>
                     <img style={{width: '50%',}}
-              src={box}
+              src={image_library.roost_box_gif}
               alt=""
             />
             </div>
