@@ -18,6 +18,11 @@ export const image_library = {
   deepracer_1: `${base}Deepracer/deepracer_1.png`,
   deepracer_2: `${base}Deepracer/deepracer_2.png`,
 
+  Robotatouille1: `${base}Robotatouille/Robotatouille1.png`,
+  Robotatouille2: `${base}Robotatouille/Robotatouille2.png`,
+  Robotatouille3: `${base}Robotatouille/Robotatouille3.png`,
+  Robotatouille4: `${base}Robotatouille/Robotatouille4.png`,
+  Robotatouille5:  `${base}Robotatouille/Robotatouille5.jpg`,
 };
 
 export const video_library = {
@@ -31,4 +36,5 @@ export const video_library = {
 export const pdf_library = {
   resume: `${base}Resume/resume_2025.pdf`,
   herbicide: `${base}HerbicideMapping/herbicidemapping.pdf`,
+  robotatouille: `${base}Robotatouille/Robotatouille.pdf`,
 };

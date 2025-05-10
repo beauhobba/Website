@@ -6,38 +6,32 @@ import { Modal } from "react-bootstrap";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import Robotatouille1 from '../../images/Robotatouille/Robotatouille1.png'
-import Robotatouille2 from '../../images/Robotatouille/Robotatouille2.png'
-import Robotatouille3 from '../../images/Robotatouille/Robotatouille3.png'
-import Robotatouille4 from '../../images/Robotatouille/Robotatouille4.png'
-import Robotatouille5 from '../../images/Robotatouille/Robotatouille5.jpg'
 
-import robot from '../../images/Robotatouille/rat.png'
+import { pdf_library, image_library } from "./media";
 
-import pdfFile from "./Robotatouille.pdf"
 
 import SinglePagePDFViewer from "./single-page";
 
 const images = [
     {
-      original: Robotatouille1,
-      thumbnail: Robotatouille1,
+      original: image_library.Robotatouille1,
+      thumbnail: image_library.Robotatouille1,
     },
     {
-      original: Robotatouille2,
-      thumbnail: Robotatouille2,
+      original: image_library.Robotatouille2,
+      thumbnail: image_library.Robotatouille2,
     },
     {
-      original: Robotatouille3,
-      thumbnail: Robotatouille3,
+      original: image_library.Robotatouille3,
+      thumbnail: image_library.Robotatouille3,
     },
     {
-      original: Robotatouille4,
-      thumbnail: Robotatouille4,
+      original: image_library.Robotatouille4,
+      thumbnail: image_library.Robotatouille4,
     },
     {
-      original: Robotatouille5,
-      thumbnail: Robotatouille5,
+      original: image_library.Robotatouille5,
+      thumbnail: image_library.Robotatouille5,
     },
   ];
 
@@ -129,7 +123,7 @@ const Robotatouille = () => {
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                     <div>   
-                    <SinglePagePDFViewer pdf={pdfFile} />
+                    <SinglePagePDFViewer pdf={pdf_library.robotatouille} />
                     </div>
                     </div>
                     <br>
