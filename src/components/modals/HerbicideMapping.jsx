@@ -6,33 +6,11 @@ import ReactPlayer from "react-player";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { isMobile } from "react-device-detect";
 
-import hein1 from '../../images/heinken/hein1.png';
-import hein2 from '../../images/heinken/hein2.png';
-import hein3 from '../../images/heinken/hein3.png';
-import hein4 from '../../images/heinken/hein4.png';
+import { pdf_library } from "./media";
 
-import pdfFile from "./herbicidemapping.pdf";
 
 import SinglePagePDFViewer from "./single-page";
 
-const images = [
-    {
-      original: hein1,
-      thumbnail: hein1,
-    },
-    {
-      original: hein2,
-      thumbnail: hein2,
-    },
-    {
-      original: hein3,
-      thumbnail: hein3,
-    },
-    {
-      original: hein4,
-      thumbnail: hein4,
-    },
-  ];
 
 const HerbicideMapping = () => {
     const [show, setShow] = React.useState(false);
@@ -123,7 +101,7 @@ const HerbicideMapping = () => {
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                     <div>   
-                    <SinglePagePDFViewer pdf={pdfFile} />
+                    <SinglePagePDFViewer pdf={pdf_library.herbicide} />
                     </div>
                     </div>
                     <br>

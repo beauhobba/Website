@@ -30,5 +30,5 @@ export const video_library = {
 
 export const pdf_library = {
   resume: `${base}Resume/resume_2025.pdf`,
-
+  herbicide: `${base}HerbicideMapping/herbicidemapping.pdf`,
 };
