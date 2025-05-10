@@ -6,20 +6,19 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { isMobile } from "react-device-detect";
 import ReactPlayer from "react-player";
 
-import deepracer_1 from '../../images/Deepracer/deepracer_1.png'
-import deepracer_2 from '../../images/Deepracer/deepracer_2.png'
-import deepracer from "../../images/deepracer.png";
+
+import { image_library, video_library } from "./media";
 
 
 
 const images = [
     {
-      original: deepracer_1,
-      thumbnail: deepracer_1,
+      original: image_library.deepracer_1,
+      thumbnail: image_library.deepracer_1,
     },
     {
-      original: deepracer_2,
-      thumbnail: deepracer_2,
+      original: image_library.deepracer_2,
+      thumbnail: image_library.deepracer_2,
     },
   ];
 
@@ -45,7 +44,7 @@ const Deepracer = () => {
     return(
     <><div class="col-sm">
         <CardTile
-            photo={deepracer}
+            photo={image_library.deepracer_title}
             text={class_text}
             event={() => handleSubmit()} 
         />
@@ -104,7 +103,7 @@ const Deepracer = () => {
                                         <hr style={{ color: "black", backgroundColor: "white", height: 5 }} />
                     
                                 <div style={{ display: "flex", justifyContent: "center" }}>
-                                  <ReactPlayer url="https://youtube.com/shorts/1GoyAYqI5Xs?feature=share" />
+                                  <ReactPlayer url={video_library.deepracer_video}  controls width="100%" />
                                 </div>
                                         <br>
                                         </br>

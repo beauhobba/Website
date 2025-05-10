@@ -12,12 +12,19 @@ export const image_library = {
   roost5: `${base}Roost/roost5.png`,
   roost6: `${base}Roost/roost6.png`,
   roost_game: `${base}Roost/roost_game.png`,
-  roost_box_gif: `${base}Roost/box.gif`
+  roost_box_gif: `${base}Roost/box.gif`,
+
+  deepracer_title: `${base}Deepracer/deepracer_title.png`,
+  deepracer_1: `${base}Deepracer/deepracer_1.png`,
+  deepracer_2: `${base}Deepracer/deepracer_2.png`,
+
 };
 
 export const video_library = {
   inspector_demo: `${base}Inspector/inspector_demo_compressed.mp4`,
   inspector_tracking: `${base}Inspector/inspector_tracking_compressed.mp4`,
+
+  deepracer_video: `${base}Deepracer/deepracer_video.mp4`,
 
 };
 

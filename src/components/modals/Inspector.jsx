@@ -79,13 +79,17 @@ const InspectorRobot = () => {
           </section>
 
           <section style={{ marginTop: "2rem" }}>
-            <h4>Video</h4>
+            <h4>Videos</h4>
             <hr style={{ backgroundColor: "white", height: 5 }} />
             <div style={{ maxWidth: "800px", margin: "0 auto", marginBottom: 20 }}>
               <Slider {...sliderSettings}>
                 {videoUrls.map((url, index) => (
-                  <div key={index} style={{ display: "flex", justifyContent: "center" }}>
-                    <ReactPlayer url={url} controls width="100%" height="auto" />
+                  <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  <p style={{ marginTop: "0.5rem", fontSize: "0.9rem", color: "#888" }}>
+              Video {index + 1} of {videoUrls.length}
+            </p>
+            <ReactPlayer url={url} controls width="100%" />
+  
                   </div>
                 ))}
               </Slider>
