@@ -5,7 +5,7 @@ import CardTile from "./cards/CardTile";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
-  Geospan, Chippendale, NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
+  MCAD, Geospan, Chippendale, NRLOpenSource, Brick, PyChat, CoreNLP, EVChargingMap, InspectorRobot,
   ElectricCouncilMap, Heineken, Shuffleboard, HerbicideMapping,
   Robotatouille, Roost, Blackjack, AustraliaDatabases,
   SmartTrafficLantern, Deepracer
@@ -33,7 +33,7 @@ const projects = [
   { id: "ancap", year: [2023, 2024, 2025], component: <CardTile photo={white} text={"ANCAP Reporting Tools"} />, isCardTile: true },
   { id: "lantern-pubsub", year: [2025], component: <CardTile photo={white} text={"Traffic Lantern Publisher Subscriber"} />, isCardTile: true },
   { id: "harbour-tunnel", year: [2025], component: <CardTile photo={white} text={"Sydney Harbour Tunnel C-ITS"} />, isCardTile: true },
-  { id: "mcad", year: [2024, 2025], component: <CardTile photo={white} text={"MCAD"} />, isCardTile: true },
+  { id: "mcad", year: [2024, 2025], component: <MCAD/> },
   { id: "chippendale", year: [2024], component: <Chippendale /> },
   { id: "careful", year: [2025], component: <CardTile photo={white} text={"CAREFUL Buses"} />, isCardTile: true },
   { id: "ev-trailer", year: [2025], component: <CardTile photo={white} text={"EV Recovery Trailer"} />, isCardTile: true },
